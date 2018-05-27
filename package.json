@@ -10,7 +10,7 @@
   "keywords": [],
   "scripts": {
     "start": "nodemon --exec ts-node src/index.ts",
-    "gentypes": "gql2ts src/data/schema.graphql -o src/data/schema.d.ts",
+    "gentypes": "gql2ts src/data/schema.graphql -o src/types/schema.d.ts",
     "info": "npm-scripts-info",
     "build": "run-s clean && run-p build:*",
     "build:main": "tsc -p tsconfig.json",
@@ -56,7 +56,6 @@
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",
-    "graphql-import": "^0.6.0",
     "graphql-request": "^1.6.0",
     "graphql-yoga": "^1.14.5",
     "sha.js": "^2.4.10",

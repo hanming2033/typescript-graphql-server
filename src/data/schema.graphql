@@ -1,8 +1,17 @@
 type Query {
-  hello(name: String): String!
+  info: String!
+  feed: [Link!]!
+  link(id: ID!): Link
 }
 
 type Mutation {
-  # return should be boolean to show if the register is successful
-  register(email: String!, password: String!): String
+  post(url: String!, description: String!): Link!
+  updateLink(id: ID!, url: String, description: String): Link # Delete a link
+  deleteLink(id: ID!): Link
+}
+
+type Link {
+  id: ID!
+  description: String!
+  url: String!
 }
