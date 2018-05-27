@@ -1,10 +1,17 @@
 {
   "extends": ["tslint:latest", "tslint-config-prettier", "tslint-immutable"],
   "rules": {
-    "interface-name": [true, "never-prefix"],
+    // "interface-name": [true, "never-prefix"],
     // TODO: allow devDependencies only in **/*.spec.ts files:
     // waiting on https://github.com/palantir/tslint/pull/3708
-    "no-implicit-dependencies": [true, "dev"],
+    "no-console": false,
+    "member-access": false,
+    "object-literal-sort-keys": false,
+    "ordered-imports": false,
+    "no-empty-interface": false,
+    "curly": false,
+    "no-implicit-dependencies": false,
+    "no-submodule-imports": false,
 
     /* tslint-immutable rules */
     // Recommended built-in rules
