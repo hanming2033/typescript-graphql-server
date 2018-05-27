@@ -4,6 +4,7 @@ import { resolvers } from './data/resolvers'
 const typeDefs = importSchema('src/data/schema.graphql')
 
 const server = new GraphQLServer({ typeDefs, resolvers })
+// tslint:disable-next-line:no-expression-statement
 server.start(() => console.log('Server is running on localhost:4000'))
 
 // uuid: https://github.com/kelektiv/node-uuid

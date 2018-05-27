@@ -64,7 +64,6 @@
   },
   "devDependencies": {
     "@types/bcryptjs": "^2.4.1",
-    "@types/jest": "^22.2.3",
     "@types/uuid": "^3.4.3",
     "@types/ws": "^5.1.1",
     "ava": "^1.0.0-beta.3",
@@ -72,7 +71,6 @@
     "cz-conventional-changelog": "^2.1.0",
     "gh-pages": "^1.0.0",
     "gql2ts": "^1.8.0",
-    "jest": "^23.0.0",
     "nodemon": "^1.17.5",
     "npm-run-all": "^4.1.2",
     "npm-scripts-info": "^0.3.6",
@@ -82,7 +80,6 @@
     "prettier": "^1.10.2",
     "standard-version": "^4.0.0",
     "trash-cli": "^1.4.0",
-    "ts-jest": "^22.4.6",
     "ts-node": "^6.0.5",
     "tslint": "^5.4.3",
     "tslint-config-prettier": "^1.8.0",
