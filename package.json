@@ -1,6 +1,6 @@
 {
   "name": "typescript-graphql-server",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "a boilerplate for creating a node graphql and mongodb app",
   "main": "build/main/index.js",
   "typings": "build/main/index.d.ts",
@@ -9,6 +9,8 @@
   "license": "MIT",
   "keywords": [],
   "scripts": {
+    "start": "nodemon --exec ts-node src/index.ts",
+    "gentypes": "gql2ts src/data/schema.graphql -o src/data/schema.d.ts",
     "info": "npm-scripts-info",
     "build": "run-s clean && run-p build:*",
     "build:main": "tsc -p tsconfig.json",
@@ -53,13 +55,23 @@
     "node": ">=8.9"
   },
   "dependencies": {
-    "sha.js": "^2.4.10"
+    "graphql-import": "^0.6.0",
+    "graphql-request": "^1.6.0",
+    "graphql-yoga": "^1.14.5",
+    "sha.js": "^2.4.10",
+    "uuid": "^3.2.1"
   },
   "devDependencies": {
+    "@types/jest": "^22.2.3",
+    "@types/uuid": "^3.4.3",
+    "@types/ws": "^5.1.1",
     "ava": "^1.0.0-beta.3",
     "codecov": "^3.0.0",
     "cz-conventional-changelog": "^2.1.0",
     "gh-pages": "^1.0.0",
+    "gql2ts": "^1.8.0",
+    "jest": "^23.0.0",
+    "nodemon": "^1.17.5",
     "npm-run-all": "^4.1.2",
     "npm-scripts-info": "^0.3.6",
     "nsp": "^3.2.1",
@@ -68,6 +80,8 @@
     "prettier": "^1.10.2",
     "standard-version": "^4.0.0",
     "trash-cli": "^1.4.0",
+    "ts-jest": "^22.4.6",
+    "ts-node": "^6.0.5",
     "tslint": "^5.4.3",
     "tslint-config-prettier": "^1.8.0",
     "tslint-immutable": "^4.5.1",
@@ -94,7 +108,9 @@
     ]
   },
   "prettier": {
-    "singleQuote": true
+    "singleQuote": true,
+    "semi": false,
+    "printWidth": 140
   },
   "nyc": {
     "exclude": [
