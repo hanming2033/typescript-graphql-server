@@ -1,5 +1,6 @@
 import { GraphQLServer } from 'graphql-yoga'
 import { resolvers } from './data/resolvers'
+// import mongoose
 
 const server = new GraphQLServer({ typeDefs: './src/data/schema.graphql', resolvers })
 // tslint:disable-next-line:no-expression-statement
